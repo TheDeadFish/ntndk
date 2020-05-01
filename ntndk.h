@@ -19,6 +19,12 @@ Author:
 #ifndef _NTNDK_
 #define _NTNDK_
 
+// dfsw - fix NTDDI_VERSION
+#if NTDDI_VERSION == NTDDI_WS03
+ #undef NTDDI_VERSION
+ #define NTDDI_VERSION NTDDI_WS03SP2
+#endif
+
 //
 // Disable some warnings that we'd get on /W4.
 // Only active for compilers which support this feature.
