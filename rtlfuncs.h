@@ -22,11 +22,11 @@ Author:
 //
 // Dependencies
 //
-#include <umtypes.h>
-#include <ntnls.h>
-#include <rtltypes.h>
-#include <pstypes.h>
-#include <extypes.h>
+#include "umtypes.h"
+#include "ntnls.h"
+#include "rtltypes.h"
+#include "pstypes.h"
+#include "extypes.h"
 #include "in6addr.h"
 #include "inaddr.h"
 
@@ -938,6 +938,7 @@ RtlProtectHeap(
     _In_ BOOLEAN Protect
 );
 
+#if 0 // mingw compatibility - dfsw
 NTSYSAPI
 NTSTATUS
 NTAPI
@@ -949,6 +950,7 @@ RtlQueryHeapInformation(
     _When_(HeapInformationClass==HeapCompatibilityInformation, _On_failure_(_Out_opt_))
         _Out_opt_ PSIZE_T ReturnLength
 );
+#endif // mingw compatibility - dfsw
 
 _Ret_opt_z_
 NTSYSAPI
@@ -975,6 +977,7 @@ RtlReAllocateHeap(
     _In_ SIZE_T Size
 );
 
+#if 0 // mingw compatibility - dfsw
 NTSYSAPI
 NTSTATUS
 NTAPI
@@ -984,6 +987,7 @@ RtlSetHeapInformation(
     _When_(HeapInformationClass==HeapCompatibilityInformation,_In_) PVOID HeapInformation,
     _In_ SIZE_T HeapInformationLength
 );
+#endif // mingw compatibility - dfsw
 
 NTSYSAPI
 BOOLEAN
@@ -992,6 +996,7 @@ RtlLockHeap(
     _In_ HANDLE Heap
 );
 
+#if 0 // mingw compatibility - dfsw
 _Must_inspect_result_
 NTSYSAPI
 NTSTATUS
@@ -1013,6 +1018,7 @@ RtlMultipleFreeHeap (
     _In_ ULONG Count,
     _In_count_(Count) /* _Deref_ _Post_invalid_ */ PVOID * Array
     );
+#endif // mingw compatibility - dfsw
 
 NTSYSAPI
 NTSTATUS

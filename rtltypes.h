@@ -22,9 +22,9 @@ Author:
 //
 // Dependencies
 //
-#include <umtypes.h>
-#include <mmtypes.h>
-#include <ldrtypes.h>
+#include "umtypes.h"
+#include "mmtypes.h"
+#include "ldrtypes.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -1347,11 +1347,13 @@ typedef struct _RTL_BSD_DATA
 //
 // Exception Record
 //
+#if 0 // mingw compatibility - dfsw
 typedef struct _EXCEPTION_REGISTRATION_RECORD
 {
     struct _EXCEPTION_REGISTRATION_RECORD *Next;
     PEXCEPTION_ROUTINE Handler;
 } EXCEPTION_REGISTRATION_RECORD, *PEXCEPTION_REGISTRATION_RECORD;
+#endif // mingw compatibility - dfsw
 #endif /* NTOS_MODE_USER */
 
 //
@@ -1546,12 +1548,14 @@ typedef struct _RTL_USER_PROCESS_INFORMATION
 
 #if (NTDDI_VERSION >= NTDDI_WIN7)
 
+#if 0 // mingw compatibility - dfsw
 typedef enum _RTL_UMS_SCHEDULER_REASON
 {
     UmsSchedulerStartup = 0,
     UmsSchedulerThreadBlocked = 1,
     UmsSchedulerThreadYield = 2,
 } RTL_UMS_SCHEDULER_REASON, *PRTL_UMS_SCHEDULER_REASON;
+#endif
 
 typedef enum _RTL_UMSCTX_FLAGS
 {

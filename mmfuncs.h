@@ -22,8 +22,8 @@ Author:
 //
 // Dependencies
 //
-#include <umtypes.h>
-#include <mmtypes.h>
+#include "umtypes.h"
+#include "mmtypes.h"
 
 #ifndef NTOS_MODE_USER
 

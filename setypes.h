@@ -22,7 +22,7 @@ Author:
 //
 // Dependencies
 //
-#include <umtypes.h>
+#include "umtypes.h"
 
 //
 // Well Known SIDs
@@ -66,6 +66,7 @@ Author:
 #define SE_CREATE_GLOBAL_PRIVILEGE        (30L)
 #define SE_MAX_WELL_KNOWN_PRIVILEGE       (SE_CREATE_GLOBAL_PRIVILEGE)
 
+#if 0 // mingw compatibility - dfsw
 typedef struct _TOKEN_MANDATORY_POLICY {
   ULONG Policy;
 } TOKEN_MANDATORY_POLICY, *PTOKEN_MANDATORY_POLICY;
@@ -81,6 +82,7 @@ typedef struct _TOKEN_ACCESS_INFORMATION
     TOKEN_MANDATORY_POLICY MandatoryPolicy;
     ULONG Flags;
 } TOKEN_ACCESS_INFORMATION, *PTOKEN_ACCESS_INFORMATION;
+#endif // mingw compatibility - dfsw
 
 #else
 

@@ -22,11 +22,11 @@ Author:
 //
 // Dependencies
 //
-#include <umtypes.h>
+#include "umtypes.h"
 #ifndef NTOS_MODE_USER
-#include <haltypes.h>
-#include <potypes.h>
-#include <ifssupp.h>
+#include "haltypes.h"
+#include "potypes.h"
+#include "ifssupp.h"
 #endif
 
 //

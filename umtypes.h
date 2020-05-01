@@ -25,7 +25,7 @@ Author:
 //
 #include <sal.h>
 #if (_SAL_VERSION < 20)
-#include <no_sal2.h>
+#include "no_sal2.h"
 #endif
 
 //
@@ -47,7 +47,7 @@ Author:
 #undef WIN32_NO_STATUS
 #include <ntstatus.h>
 #include <winioctl.h>
-#include <ntnls.h>
+#include "ntnls.h"
 
 //
 // Compiler Definitions

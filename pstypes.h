@@ -22,14 +22,14 @@ Author:
 //
 // Dependencies
 //
-#include <umtypes.h>
-#include <ldrtypes.h>
-#include <mmtypes.h>
-#include <obtypes.h>
-#include <rtltypes.h>
+#include "umtypes.h"
+#include "ldrtypes.h"
+#include "mmtypes.h"
+#include "obtypes.h"
+#include "rtltypes.h"
 #ifndef NTOS_MODE_USER
-#include <extypes.h>
-#include <setypes.h>
+#include "extypes.h"
+#include "setypes.h"
 #endif
 
 #ifdef __cplusplus

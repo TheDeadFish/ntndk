@@ -22,8 +22,8 @@ Author:
 //
 // Dependencies
 //
-#include <umtypes.h>
-#include <vftypes.h>
+#include "umtypes.h"
+#include "vftypes.h"
 
 #ifndef NTOS_MODE_USER
 

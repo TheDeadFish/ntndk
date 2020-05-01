@@ -22,8 +22,8 @@ Author:
 //
 // Dependencies
 //
-#include <umtypes.h>
-#include <lpctypes.h>
+#include "umtypes.h"
+#include "lpctypes.h"
 
 //
 // Debug Object Access Masks

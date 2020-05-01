@@ -23,13 +23,13 @@ Author:
 // Include the right file for this architecture.
 //
 #ifdef _M_IX86
-#include <i386/ketypes.h>
+#include "../i386/ketypes.h"
 #elif defined(_M_AMD64)
-#include <amd64/ketypes.h>
+#include "../amd64/ketypes.h"
 #elif defined(_M_PPC)
-#include <powerpc/ketypes.h>
+#include "../powerpc/ketypes.h"
 #elif defined(_M_ARM)
-#include <arm/ketypes.h>
+#include "../arm/ketypes.h"
 #else
 #error "Unknown processor"
 #endif
